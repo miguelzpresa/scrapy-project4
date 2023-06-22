@@ -1,7 +1,3 @@
-#!/usr/bin/python3
-import scrapy
-from urllib.parse import urljoin
-from scrapy_playwright.page import PageCoroutine
 
 class CIAFactbookSpider(scrapy.Spider):
     name = 'araña1'
@@ -42,3 +38,5 @@ class CIAFactbookSpider(scrapy.Spider):
         async with PageCoroutine() as page:
             await page.goto(response.url)
             await page.click('//*[@id="index-content-section"]/div/div[2]/div[2]/div/div/span[3]')
+
+>>>>>>> 8e726c6e2a18e307d43ac5d542cf02b43ebaf015

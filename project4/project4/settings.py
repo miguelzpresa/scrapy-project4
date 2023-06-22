@@ -94,4 +94,4 @@ DOWNLOAD_HANDLERS = {
 }
 
 TWISTED_REACTOR = "twisted.internet.asyncioreactor.AsyncioSelectorReactor"
-
+PLAYWRIGHT_LAUNCH_OPTIONS ={"headless":False}
