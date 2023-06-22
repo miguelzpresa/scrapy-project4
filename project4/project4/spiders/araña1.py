@@ -15,6 +15,17 @@ class CIAFactbookSpider(scrapy.Spider):
         'PLAYWRIGHT_LAUNCH_OPTIONS': {'headless': True},
     }
 
+
+    def start_requests(self):
+        yield scrapy.Request(
+            start_urls = ['https://www.cia.gov/the-world-factbook/countries/'],
+
+            meta={"playwright":True}
+
+        )
+
+
+        
     async def parse(self, response):
         country_urls = []
         div_elem = response.xpath('//div[@class="col-lg-9"]')
