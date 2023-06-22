@@ -1,4 +1,7 @@
-
+#!/usr/bin/python3
+import scrapy
+from urllib.parse import urljoin
+from scrapy_playwright.page import PageCoroutine
 class CIAFactbookSpider(scrapy.Spider):
     name = 'araña1'
     start_urls = ['https://www.cia.gov/the-world-factbook/countries/afghanistan/']
